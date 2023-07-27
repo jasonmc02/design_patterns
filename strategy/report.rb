@@ -1,3 +1,6 @@
+require "./html_formatter.rb"
+require "./plain_text_formatter.rb"
+
 class Report
   def initialize(formatter)
     @title = "Monthly Report"
@@ -10,5 +13,5 @@ class Report
   end
 end
 
-# report = Report.new(HTMLFormatter.new)
-# report.output_report
+report = Report.new(HTMLFormatter.new)
+report.output_report

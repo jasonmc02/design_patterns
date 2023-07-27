@@ -1,4 +1,4 @@
-class Report
+class ReportDeprecated
   def initialize
     @title = "Monthly Report"
     @text = ["This are going", "really", "really well."]
@@ -10,7 +10,7 @@ class Report
       @text.each do |line|
         puts line
       end
-    elsif format == :hmlt
+    elsif format == :html
       puts "<html>"
       puts "<head>"
       puts "<title>#{@title}</title>"
@@ -27,5 +27,5 @@ class Report
   end
 end
 
-# report = Report.new
-# report.output_report(:html)
+report = ReportDeprecated.new
+report.output_report(:html)

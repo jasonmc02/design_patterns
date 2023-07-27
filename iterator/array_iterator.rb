@@ -27,8 +27,8 @@ class ArrayIterator
   end
 end
 
-# arr = ["green", "red", "blue"]
-# i = ArrayIterator.new(arr)
-# while i.has_next?
-#   puts "item: #{i.next_item}"
-# end
+arr = ["green", "red", "blue"]
+i = ArrayIterator.new(arr)
+while i.has_next?
+  puts "item: #{i.next_item}"
+end

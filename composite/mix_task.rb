@@ -1,3 +1,5 @@
+require "./task.rb"
+
 class MixTask < Task
   def initialize
     super("Mix the batter")

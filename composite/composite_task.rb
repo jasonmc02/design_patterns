@@ -1,3 +1,5 @@
+require "./task.rb"
+
 class CompositeTask < Task
   def initialize(name)
     super(name)

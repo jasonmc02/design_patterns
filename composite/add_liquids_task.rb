@@ -1,3 +1,5 @@
+require "./task.rb"
+
 class AddLiquidsTask < Task
   def initialize
     super("Add liquids")

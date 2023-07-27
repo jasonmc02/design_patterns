@@ -1,4 +1,6 @@
-class Employee
+require "./payroll.rb"
+
+class EmployeeDeprecated
   attr_reader :name, :title
   attr_accessor :salary
 
@@ -15,6 +17,6 @@ class Employee
   end
 end
 
-# payroll = Payroll.new
-# fred = Employee.new("Fred", "Driver", 3000, payroll)
-# fred.salary = 3500
+payroll = Payroll.new
+fred = EmployeeDeprecated.new("Fred", "Driver", 3000, payroll)
+fred.salary = 3500

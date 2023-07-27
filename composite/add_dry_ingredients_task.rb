@@ -1,3 +1,5 @@
+require "./task.rb"
+
 class AddDryIngredientsTask < Task
   def initialize
     super("Add dry ingredients")

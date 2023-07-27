@@ -1,3 +1,8 @@
+require "./composite_task.rb"
+require "./add_dry_ingredients_task.rb"
+require "./add_liquids_task.rb"
+require "./mix_task.rb"
+
 class MakeBatterTask < CompositeTask
   def initialize
     super("Make batter")
@@ -7,5 +12,5 @@ class MakeBatterTask < CompositeTask
   end
 end
 
-# batter = MakeBatterTask.new
-# batter.get_time_reuired
+batter = MakeBatterTask.new
+puts batter.get_time_required

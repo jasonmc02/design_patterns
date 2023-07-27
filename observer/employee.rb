@@ -1,3 +1,7 @@
+require "./subject.rb"
+require "./payroll.rb"
+require "./tax_man.rb"
+
 class Employee
   include Subject
   
@@ -17,9 +21,9 @@ class Employee
   end
 end
 
-# fred = Employee.new("Fred", "Driver", 3000)
-# payroll = Payroll.new
-# tax_man = TaxMan.new
-# fred.add_observer(payroll)
-# fred.add_observer(tax_man)
-# fred.salary = 3500
+fred = Employee.new("Fred", "Driver", 3000)
+payroll = Payroll.new
+tax_man = TaxMan.new
+fred.add_observers(payroll)
+fred.add_observers(tax_man)
+fred.salary = 3500

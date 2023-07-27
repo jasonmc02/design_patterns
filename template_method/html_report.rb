@@ -1,3 +1,5 @@
+require "./report.rb"
+
 class HTMLReport < Report
   def output_start
     puts "<html>"
@@ -26,5 +28,5 @@ class HTMLReport < Report
   end
 end
 
-# report = HTMLReport.new
-# report.output_report
+report = HTMLReport.new
+report.output_report
