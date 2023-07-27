@@ -16,8 +16,10 @@ class CompositeCommand < Command
     @commands.each { |cmd| description += cmd.description = "\n" }
     description
   end
-
-  def unexecute
-    @commands.reverse.each { |cmd| cmd.unexecute }
-  end
 end
+
+# cmds = CompositeCommand.new
+# cmds.add_command(CreateFile.new("file_1.txt", "hello world"))
+# cmds.add_command(CopyFile.new("file_1.txt", "file_2.txt"))
+# cmds.add_command(DeleteFile.new("file_1.txt"))
+# cmds.execute

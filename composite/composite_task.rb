@@ -1,6 +1,4 @@
 class CompositeTask < Task
-  attr_accessor :sub_tasks
-
   def initialize(name)
     super(name)
     @sub_tasks = []

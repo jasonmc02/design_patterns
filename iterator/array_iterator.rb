@@ -1,12 +1,10 @@
 class ArrayIterator
-  attr_accessor :array, :index
-
   def initialize(array)
     @array = array
     @index = 0
   end
 
-  def has_index?
+  def has_next?
     @index < @array.length
   end
 
@@ -20,7 +18,7 @@ class ArrayIterator
     value
   end
 
-  def for_each_element(array)
+  def for_each_element(array) # internal iterator
     i = 0
     while i < array.length
       yield(array[i])
@@ -28,3 +26,9 @@ class ArrayIterator
     end
   end
 end
+
+# arr = ["green", "red", "blue"]
+# i = ArrayIterator.new(arr)
+# while i.has_next?
+#   puts "item: #{i.next_item}"
+# end

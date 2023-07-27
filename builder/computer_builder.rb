@@ -5,7 +5,7 @@ class ComputerBuilder
     @computer = Computer.new
   end
 
-  def turbo_cpu(has_turbo_cpu = false)
+  def turbo_cpu(has_turbo_cpu=false)
     @computer.motherboard.cpu = TurboCPU.new
   end
 
@@ -17,11 +17,11 @@ class ComputerBuilder
     @computer.motherboard.memory_size = size_in_mb
   end
 
-  def add_cd(writer = false)
+  def add_cd(writer=false)
     @computer.drives << Drive.new(:cd, 760, writer)
   end
 
-  def add_dvd(writer = false)
+  def add_dvd(writer=false)
     @computer.drives << Drive.new(:dvd, 4700, writer)
   end
 
@@ -29,3 +29,10 @@ class ComputerBuilder
     @computer.drives << Drive.new(:hard_disk, size_in_mb, true)
   end
 end
+
+# builder = ComputerBuilder.new
+# builder.turbo
+# builder.add_cd
+# builder.add_dvd
+# builder.add_hard_disk
+# computer = builder.computer

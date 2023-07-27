@@ -7,3 +7,6 @@ class PlainTextReport < Report
     puts line
   end
 end
+
+# report = PlainTextReport.new
+# report.output_report

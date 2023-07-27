@@ -6,7 +6,6 @@ class SimpleLogger
   INFO = 3
 
   def initialize
-    @@instance = SimpleLogger.new
     @log = File.open("log.txt", "w")
     @level = WARNING
   end
@@ -25,13 +24,8 @@ class SimpleLogger
     @log.puts(msg) if @level >= INFO
     @log.flush
   end
-
-  def self.instance
-    @@instance
-  end
-
-  private_class_method :new
 end
 
-# SimpleLogger.instance.level = SimpleLogger::WARNING
-# SimpleLogger.instance.warning("This is a log.")
+# logger = SimpleLogger.new
+# logger.level = SimpleLogger::INFO
+# logger.info("Doing a thing.")

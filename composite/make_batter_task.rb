@@ -6,3 +6,6 @@ class MakeBatterTask < CompositeTask
     add_sub_task(MixTask.new)
   end
 end
+
+# batter = MakeBatterTask.new
+# batter.get_time_reuired

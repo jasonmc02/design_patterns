@@ -25,3 +25,6 @@ class HTMLReport < Report
     puts "</html>"
   end
 end
+
+# report = HTMLReport.new
+# report.output_report

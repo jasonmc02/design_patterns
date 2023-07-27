@@ -27,3 +27,5 @@ class Expression
     Writable.new
   end
 end
+
+# (bigger(20000) & except(writable)) | name("*.mp3")

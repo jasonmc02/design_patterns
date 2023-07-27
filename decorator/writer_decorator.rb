@@ -7,14 +7,6 @@ class WriterDecorator
     @real_writer.write_line(line)
   end
 
-  def post
-    @real_writer.pos
-  end
-
-  def rewind
-    @real_writer.rewind
-  end
-
   def close
     @real_writer.close
   end

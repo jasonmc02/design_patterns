@@ -4,7 +4,7 @@ class Report
     @text = ["This are going", "really", "really well."]
   end
   
-  def output_report(format)
+  def output_report
     output_start
     output_head
     output_body_start

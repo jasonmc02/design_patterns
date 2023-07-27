@@ -13,3 +13,8 @@ class Encrypter
     end
   end
 end
+
+# encrypter = Encrypter.new("Strong Key")
+# reader = StringIOAdapter.new("Hello World")
+# writer = File.open("message.encrypted", "w")
+# encrypter.encrypt(reader, writer)

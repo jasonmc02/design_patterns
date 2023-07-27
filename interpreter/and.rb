@@ -7,6 +7,6 @@ class And < Expression
   def evaluate(dir)
     result_1 = @expression_1.evaluate(dir)
     result_2 = @expression_2.evaluate(dir)
-    result_1 & result_2
+    (result_1 & result_2)
   end
 end

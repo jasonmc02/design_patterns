@@ -8,15 +8,16 @@ class SimpleWriter
     @file.print("\n")
   end
 
-  def post
-    @file.pos
-  end
-
-  def rewind
-    @file.rewind
-  end
-
   def close
     @file.close
   end
 end
+
+# writer = CheckSummingWriter.new(
+#   TimeStampingWriter.new(
+#     NumberingWriter.new(
+#       SimpleWriter.new("final.txt")
+#     )
+#   )
+# )
+# writer.write_line("Hello world!")

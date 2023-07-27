@@ -1,7 +1,4 @@
 class Report
-  attr_reader :title, :text
-  attr_accessor :formatter
-
   def initialize(formatter)
     @title = "Monthly Report"
     @text = ["This are going", "really", "really well."]
@@ -12,3 +9,6 @@ class Report
     @formatter.output_report(@title, @text)
   end
 end
+
+# report = Report.new(HTMLFormatter.new)
+# report.output_report
