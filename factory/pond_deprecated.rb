@@ -1,4 +1,6 @@
-class Pond
+require "./duck.rb"
+
+class PondDeprecated
   def initialize(number_animals)
     @ducks = []
     number_animals.times do |i|
@@ -7,11 +9,11 @@ class Pond
   end
 
   def simulate_one_day
-    @ducks.each {|duck| duck.speack }
+    @ducks.each {|duck| duck.speak }
     @ducks.each {|duck| duck.eat }
     @ducks.each {|duck| duck.sleep }
   end
 end
 
-# pond = Pond.new(3)
-# pond.simulate_one_day
+pond = PondDeprecated.new(3)
+pond.simulate_one_day

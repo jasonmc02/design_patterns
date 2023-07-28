@@ -1,4 +1,6 @@
-class Bigger < Expression
+require "find"
+
+class Bigger
   def initialize(size)
     @size = size
   end

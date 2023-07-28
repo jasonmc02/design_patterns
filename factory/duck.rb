@@ -1,17 +1,17 @@
 class Duck
   def initialize(name)
-    @name
+    @name = name
   end
 
   def eat
-    puts("Duck #{@name} is eating.")
+    puts("#{@name} is eating.")
   end
 
   def speak
-    puts("Duck #{@name} says Quack!")
+    puts("#{@name} says Quack!")
   end
 
   def sleep
-    puts("Duck #{@name} sleeps quietly.")
+    puts("#{@name} sleeps quietly.")
   end
 end

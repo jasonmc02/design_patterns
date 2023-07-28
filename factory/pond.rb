@@ -14,6 +14,3 @@ class Pond
     end
   end
 end
-
-# pond = FrogPond.new(3)
-# pond.simulate_one_day

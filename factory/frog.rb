@@ -1,17 +1,17 @@
 class Frog
   def initialize(name)
-    @name
+    @name = name
   end
 
   def eat
-    puts("Frog #{@name} is eating.")
+    puts("#{@name} is eating.")
   end
 
   def speak
-    puts("Frog #{@name} says Croak!")
+    puts("#{@name} says Croak!")
   end
 
   def sleep
-    puts("Frog #{@name} doesn't sleep; he croaks all night!")
+    puts("#{@name} doesn't sleep; he croaks all night!")
   end
 end

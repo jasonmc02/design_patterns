@@ -1,3 +1,7 @@
+require "./numbering_writer.rb"
+require "./time_stamping_writer.rb"
+require "./check_summing_writer.rb"
+
 class SimpleWriter
   def initialize(path)
     @file = File.open(path, "w")
@@ -13,11 +17,11 @@ class SimpleWriter
   end
 end
 
-# writer = CheckSummingWriter.new(
-#   TimeStampingWriter.new(
-#     NumberingWriter.new(
-#       SimpleWriter.new("final.txt")
-#     )
-#   )
-# )
-# writer.write_line("Hello world!")
+writer = CheckSummingWriter.new(
+  TimeStampingWriter.new(
+    NumberingWriter.new(
+      SimpleWriter.new("final.txt")
+    )
+  )
+)
+writer.write_line("Hello world!")

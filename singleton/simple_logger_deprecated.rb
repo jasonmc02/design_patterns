@@ -1,4 +1,4 @@
-class SimpleLogger
+class SimpleLoggerDeprecated
   attr_accessor :level
 
   ERROR = 1
@@ -7,7 +7,7 @@ class SimpleLogger
 
   def initialize
     @log = File.open("log.txt", "w")
-    @level = WARNING
+    @level = ERROR
   end
 
   def error
@@ -26,6 +26,6 @@ class SimpleLogger
   end
 end
 
-# logger = SimpleLogger.new
-# logger.level = SimpleLogger::INFO
-# logger.info("Doing a thing.")
+logger = SimpleLoggerDeprecated.new
+logger.level = SimpleLoggerDeprecated::INFO
+logger.info("Doing a thing.")

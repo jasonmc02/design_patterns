@@ -1,10 +1,18 @@
-class Expression
-  def |(other)
-    Or.new(self, other)
+require "./or.rb"
+require "./and.rb"
+require "./all.rb"
+require "./bigger.rb"
+require "./file_name.rb"
+require "./not.rb"
+require "./writable.rb"
+
+module Expression
+  def otherwise(this, other)
+    Or.new(this, other)
   end
 
-  def &(other)
-    And.new(self, other)
+  def including(this, other)
+    And.new(this, other)
   end
 
   def all
@@ -15,7 +23,7 @@ class Expression
     Bigger.new(size)
   end
 
-  def name(pattern)
+  def named(pattern)
     FileName.new(pattern)
   end
 
@@ -28,4 +36,12 @@ class Expression
   end
 end
 
-# (bigger(20000) & except(writable)) | name("*.mp3")
+extend Expression
+
+puts otherwise(named("*.pdf"), including(bigger(4500000), except(writable))).evaluate("./assets")
+
+# puts including(bigger(4500000), except(writable)).evaluate("./assets")
+# puts including(named("*.pdf"), writable).evaluate("./assets")
+# puts otherwise(named("*.pdf"), named("*.docx")).evaluate("./assets")
+# puts writable.evaluate("./assets")
+# puts all.evaluate("./assets")

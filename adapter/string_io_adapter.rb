@@ -1,3 +1,5 @@
+require "./encrypter.rb"
+
 class StringIOAdapter
   def initialize(string)
     @string = string
@@ -5,7 +7,7 @@ class StringIOAdapter
   end
 
   def getc
-    raise EOFError if @position >= @string.length
+    raise EOFError if eof?
     ch = @string[@position]
     @position += 1
     ch
@@ -15,3 +17,8 @@ class StringIOAdapter
     @position >= @string.length
   end
 end
+
+encrypter = Encrypter.new("Strong Key")
+reader = StringIOAdapter.new("Hello World")
+writer = File.open("message.encrypted", "w")
+encrypter.encrypt(reader, writer)

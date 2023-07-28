@@ -13,11 +13,3 @@ class BankAccount
     @balance -= amount
   end
 end
-
-# account = BankAccount.new(100)
-# proxy = AccountProtectionProxy.new(account, "Joe")
-# proxy.deposit(50)
-# proxy.withdraw(10)
-# proxy.balance
-# proxy = AccountProtectionProxy.new(account, "John")
-# proxy.balance

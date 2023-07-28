@@ -13,9 +13,9 @@ class EnhancedWriter
   end
 
   def check_sum_write_line(line)
-    data.each_byte { |byte| @check_sum = (@check_sum + byte) % 256 }
-    @check_sum += "\n"[0] % 256
-    write_line(line)
+    line.each_byte { |byte| @check_sum = (@check_sum + byte) % 256 }
+    @check_sum += ("\n"[0]).to_i % 256
+    @real_writer.write_line("#{line}  - #{@check_sum}")
   end
 
   def timestamp_write_line(line)
@@ -35,4 +35,3 @@ end
 writer = EnhancedWriter.new("out.txt")
 writer.write_line("A plain line.")
 writer.timestamp_write_line("A line with timestamp.")
-

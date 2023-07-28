@@ -1,4 +1,6 @@
-class FileName < Expression
+require "find"
+
+class FileName
   def initialize(pattern)
     @pattern = pattern
   end

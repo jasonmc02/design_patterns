@@ -1,4 +1,4 @@
-class All < Expression
+class All
   def evaluate(dir)
     results = []
     Find.find(dir) do |p|

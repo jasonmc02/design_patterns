@@ -1,4 +1,6 @@
-class TimeStampingWriter < WriteDecorator
+require "./writer_decorator.rb"
+
+class TimeStampingWriter < WriterDecorator
   def initialize(real_writer)
     super(real_writer)
   end

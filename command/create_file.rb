@@ -1,3 +1,5 @@
+require "./command.rb"
+
 class CreateFile < Command
   def initialize(path, contents)
     super("Create File: #{path}")

@@ -1,4 +1,4 @@
-class Or < Expression
+class Or
   def initialize(expression_1, expression_2)
     @expression_1 = expression_1
     @expression_2 = expression_2

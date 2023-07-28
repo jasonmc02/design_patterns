@@ -1,3 +1,5 @@
+require "./command.rb"
+
 class DeleteFile < Command
   def initialize(path)
     super("Delete File: #{path}")

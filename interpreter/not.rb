@@ -1,4 +1,6 @@
-class Not < Expression
+require "./all.rb"
+
+class Not
   def initialize(expression)
     @expression = expression
   end

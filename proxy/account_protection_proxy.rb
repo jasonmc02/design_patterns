@@ -1,4 +1,5 @@
 require "etc"
+require "./bank_account.rb"
 
 class AccountProtectionProxy
   def initialize(real_account, owner_name)
@@ -27,3 +28,11 @@ class AccountProtectionProxy
     end
   end
 end
+
+account = BankAccount.new(100)
+proxy = AccountProtectionProxy.new(account, "jmelendezcastro")
+proxy.deposit(50)
+proxy.withdraw(10)
+puts proxy.balance
+proxy = AccountProtectionProxy.new(account, "Joe")
+puts proxy.balance

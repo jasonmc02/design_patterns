@@ -1,4 +1,6 @@
-class Writable < Expression
+require "find"
+
+class Writable
   def evaluate(dir)
     results = []
     Find.find(dir) do |p|

@@ -1,3 +1,6 @@
+require "fileutils"
+require "./command.rb"
+
 class CopyFile < Command
   def initialize(source, target)
     super("Copy File: #{source} to #{target}")

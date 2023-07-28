@@ -1,3 +1,8 @@
+require "./computer.rb"
+require "./motherboard.rb"
+require "./cpu.rb"
+require "./drive.rb"
+
 class ComputerBuilder
   attr_reader :computer
 
@@ -30,9 +35,12 @@ class ComputerBuilder
   end
 end
 
-# builder = ComputerBuilder.new
-# builder.turbo
-# builder.add_cd
-# builder.add_dvd
-# builder.add_hard_disk
-# computer = builder.computer
+builder = ComputerBuilder.new
+builder.display = :lcd
+builder.turbo_cpu
+builder.memory_size = 16000
+builder.add_cd
+builder.add_dvd
+builder.add_hard_disk(250000)
+computer = builder.computer
+puts "Display: #{computer.display}, CPU: #{computer.motherboard.cpu.class.name}, Memory: #{computer.motherboard.memory_size}, Drives: #{computer.drives.map(&:type)}"
