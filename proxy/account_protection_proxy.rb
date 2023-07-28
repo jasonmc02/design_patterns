@@ -30,7 +30,7 @@ class AccountProtectionProxy
 end
 
 account = BankAccount.new(100)
-proxy = AccountProtectionProxy.new(account, "jmelendezcastro")
+proxy = AccountProtectionProxy.new(account, "John")
 proxy.deposit(50)
 proxy.withdraw(10)
 puts proxy.balance
